@@ -17,16 +17,13 @@ class FocusFace(nn.Module):
         if not(inference):
             y = self.fc(e1.view(e1.shape[0],-1),label)
             y2 = self.fc2(e2.view(e2.shape[0],-1))
-            x_pred = None
             e2 = e2.view(e2.shape[0],-1)
         e1 = e1.view(e1.shape[0],-1)
         if inference: 
             y2 = self.fc2(e2.view(e2.shape[0],-1))
         if not(inference):
-            e1_pred = None
-            e2_pred = None
-            return y,x_pred,e1_pred,e2_pred,e1,e2,y2
-        return None,None,None,None,e1,None,torch.nn.functional.softmax(y2)[:,1]
+            return y,e1,e2,y2
+        return None,e1,None,torch.nn.functional.softmax(y2)[:,1]
 
 
 

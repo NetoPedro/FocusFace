@@ -38,7 +38,7 @@ Our models can be downloaded [here](https://drive.inesctec.pt/s/mKzZ6JGF52pxoc2)
 
 ### To-do 
 - [X] Add pretrained models
-- [ ] Add train script 
+- [X] Add train script 
 - [ ] Add evaluation script 
 
 ## Citing ##

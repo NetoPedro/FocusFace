@@ -77,9 +77,9 @@ def train(net,trainloader,validationloader,n_epochs=10,lr=0.1):
 
             
             optimizer2.zero_grad()
-            outputs,x_pred,e1_pred,e2_pred,e1,e2,mask = net(inputs,label=labels)
+            outputs,e1,e2,mask = net(inputs,label=labels)
             loss = (criterion(outputs, labels)) +  0.1 * criterion(mask*0,labels2) 
-            outputs,x_pred,e1_pred,e2_pred,e1_,e2,mask = net(inputs_masked,label=labels)
+            outputs,e1_,e2,mask = net(inputs_masked,label=labels)
             loss += (criterion(outputs, labels)) +  0.1 * criterion(mask,labels2) 
             loss /= 2
             loss += MSE(e1,e1_)/3
@@ -199,7 +199,7 @@ def test(data_set, backbone, batch_size,epoch):
             time0 = datetime.datetime.now()
             img = ((_data / 255) - 0.5) / 0.5
             img = img.to(device)
-            _,_,_,_,net_out,_,y2 = backbone(img,inference = True)
+            _,net_out,_,y2 = backbone(img,inference = True)
             masked.append((i,y2.detach().cpu().numpy()))
             del img
 

@@ -25,7 +25,7 @@ SARS-CoV-2 has presented direct and indirect challenges to the scientific commun
 ## Data ## 
 
 ### Datasets ###
-The "MS1M-ArcFace (85K ids/5.8M images)" can be downloaded [here](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_). 
+The LFW and the "MS1M-ArcFace (85K ids/5.8M images)" can be downloaded [here](https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_). 
 
 For all the datasets above, please strictly follow the licence distribution.
 

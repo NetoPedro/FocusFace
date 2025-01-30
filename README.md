@@ -34,7 +34,7 @@ The mask template used to create the synthetic masked data for training and eval
 
 
 ### Trained Models ###
-Our models can be downloaded [here](https://drive.inesctec.pt/s/mKzZ6JGF52pxoc2).
+Our models can be downloaded from HuggingFace [HuggingFace](https://huggingface.co/netopedro/FocusFace).
 
 ### To-do 
 - [X] Add pretrained models
